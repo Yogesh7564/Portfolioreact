@@ -65,7 +65,7 @@ function TimelineItem({ item, index, isLeft }: TimelineItemProps) {
       initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`flex items-start gap-6 ${isLeft ? 'flex-row' : 'flex-row-reverse'} mb-10`}
+      className={`flex items-start gap-4 sm:gap-6 ${isLeft ? 'flex-row' : 'flex-row-reverse'} mb-10`}
     >
       {/* Content card */}
       <div className="flex-1">
@@ -94,14 +94,14 @@ function TimelineItem({ item, index, isLeft }: TimelineItemProps) {
       {/* Center dot */}
       <div className="flex flex-col items-center flex-shrink-0">
         <div
-          className="w-10 h-10 rounded-full flex items-center justify-center border-2 relative z-10"
+          className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center border-2 relative z-10"
           style={{
             borderColor: item.color,
             background: `${item.color}15`,
             boxShadow: `0 0 15px ${item.color}30`,
           }}
         >
-          <Icon size={16} style={{ color: item.color }} />
+          <Icon size={14} style={{ color: item.color }} />
         </div>
       </div>
 
@@ -156,7 +156,7 @@ export default function About() {
           description="A journey of building, learning, and pushing boundaries in software engineering."
         />
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left: Story */}
           <div>
             <motion.div style={{ y }} className="relative">
@@ -200,7 +200,7 @@ export default function About() {
               </div>
 
               {/* Passion cards */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <PassionCard
                   icon="☕"
                   title="Java Ecosystem"

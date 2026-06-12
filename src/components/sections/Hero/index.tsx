@@ -167,7 +167,7 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           {/* ── Left: text ── */}
           <div className="text-center lg:text-left order-2 lg:order-1">
@@ -190,7 +190,7 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.7 }}
             >
               <p className="text-gray-400 text-base sm:text-lg mb-2 font-mono">Hi, I'm</p>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-space leading-none mb-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-space leading-none mb-4">
                 <span className="text-white">Yogesh</span>
                 <br />
                 <span className="gradient-text">H K</span>
@@ -202,7 +202,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-xl sm:text-2xl font-semibold text-gray-300 mb-6 min-h-[2rem]"
+              className="text-xl sm:text-2xl font-semibold text-gray-300 mb-6 min-h-[2.5rem]"
             >
               <TypeAnimation
                 sequence={typewriterSequence as (string | number)[]}
@@ -280,7 +280,7 @@ export default function Hero() {
               {/* Rotating rings */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <motion.div
-                  className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full border border-cyan-500/20"
+                  className="w-56 h-56 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full border border-cyan-500/20"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
                 />
@@ -300,7 +300,7 @@ export default function Hero() {
               </div>
 
               {/* Photo wrapper */}
-              <div className="relative w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 mx-auto">
+              <div className="relative w-44 h-44 sm:w-64 sm:h-64 lg:w-72 lg:h-72 mx-auto">
                 {/* Ambient glow behind photo */}
                 <div
                   className="absolute inset-0 rounded-full blur-2xl opacity-50"
@@ -310,7 +310,7 @@ export default function Hero() {
 
                 {/* Status badge */}
                 <motion.div
-                  className="absolute -bottom-2 -right-2 px-3 py-1.5 glass rounded-xl border border-green-500/30 flex items-center gap-1.5 text-xs font-medium text-green-400 whitespace-nowrap"
+                  className="absolute -bottom-2 right-0 sm:-right-2 px-3 py-1.5 glass rounded-xl border border-green-500/30 flex items-center gap-1.5 text-xs font-medium text-green-400 whitespace-nowrap"
                   animate={{ y: [0, -4, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                 >
@@ -320,7 +320,7 @@ export default function Hero() {
 
                 {/* IEEE badge */}
                 <motion.div
-                  className="absolute -top-3 -left-6 px-3 py-1.5 glass rounded-xl border border-cyan-500/30 flex items-center gap-1.5 text-xs font-medium text-cyan-400 whitespace-nowrap"
+                  className="absolute -top-3 left-0 sm:-left-6 px-3 py-1.5 glass rounded-xl border border-cyan-500/30 flex items-center gap-1.5 text-xs font-medium text-cyan-400 whitespace-nowrap"
                   animate={{ y: [0, 4, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
                 >
@@ -336,7 +336,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-16 lg:mt-20"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-12 lg:mt-20"
         >
           {STATS.map((stat, i) => (
             <StatCard key={stat.label} stat={stat} index={i} />

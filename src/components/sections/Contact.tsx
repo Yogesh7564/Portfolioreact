@@ -91,7 +91,7 @@ export default function Contact() {
     w-full px-4 py-3 rounded-xl text-sm
     bg-white/5 border border-white/10
     text-white placeholder-gray-600
-    focus:outline-none focus:border-cyan-500/50 focus:bg-white/8
+    focus:outline-none focus:border-cyan-500/50 focus:bg-white/10
     transition-all duration-200
   `
 
@@ -131,7 +131,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <div className="sticky top-28">
+            <div className="sticky top-24 lg:top-28">
               <div className="glass rounded-3xl p-6 border border-white/10 mb-6">
                 <div className="text-3xl mb-3">👋</div>
                 <h3 className="text-lg font-bold text-white font-space mb-2">Let's Talk</h3>

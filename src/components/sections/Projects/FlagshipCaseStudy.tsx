@@ -67,14 +67,14 @@ function MetricPill({
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: 0.08 * index, duration: 0.5 }}
-      className="flex flex-col items-center gap-1 p-3 rounded-2xl border border-white/8 group hover:border-white/15 transition-all duration-300"
+      className="flex flex-col items-center gap-0.5 p-2 rounded-xl border border-white/8 group hover:border-white/15 transition-all duration-300"
       style={{ background: `${metric.color}06` }}
     >
-      <span className="text-xl">{metric.icon}</span>
-      <span className="text-sm font-bold font-space" style={{ color: metric.color }}>
+      <span className="text-lg">{metric.icon}</span>
+      <span className="text-xs font-bold font-space" style={{ color: metric.color }}>
         {metric.value}
       </span>
-      <span className="text-[10px] text-gray-500 text-center leading-tight">{metric.label}</span>
+      <span className="text-[9px] text-gray-500 text-center leading-tight">{metric.label}</span>
     </motion.div>
   )
 }
@@ -216,7 +216,7 @@ export default function FlagshipCaseStudy({ project, reverse = false }: Flagship
         />
 
         {/* ── Header strip ── */}
-        <div className="relative z-10 px-6 sm:px-8 lg:px-10 pt-8 pb-6 border-b border-white/5">
+        <div className="relative z-10 px-4 sm:px-6 lg:px-10 pt-6 sm:pt-8 pb-5 sm:pb-6 border-b border-white/5">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               {/* Tag */}
@@ -249,7 +249,7 @@ export default function FlagshipCaseStudy({ project, reverse = false }: Flagship
                 initial={{ opacity: 0, y: 15 }}
                 animate={headerInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 }}
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold font-space text-white leading-tight mb-1"
+                className="text-xl sm:text-3xl lg:text-4xl font-bold font-space text-white leading-tight mb-1"
               >
                 {project.title}
               </motion.h3>
@@ -303,7 +303,7 @@ export default function FlagshipCaseStudy({ project, reverse = false }: Flagship
         <div ref={bodyRef} className={`relative z-10 grid lg:grid-cols-2 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-white/5`}>
 
           {/* Left panel */}
-          <div className={`p-6 sm:p-8 lg:p-10 flex flex-col gap-7 ${reverse ? 'lg:order-2' : ''}`}>
+          <div className={`p-4 sm:p-6 lg:p-10 flex flex-col gap-6 ${reverse ? 'lg:order-2' : ''}`}>
 
             {/* Overview */}
             <div>
@@ -319,7 +319,7 @@ export default function FlagshipCaseStudy({ project, reverse = false }: Flagship
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Key Metrics</span>
               </div>
-              <div className="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-3 xl:grid-cols-6 gap-2">
+              <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-3 xl:grid-cols-6 gap-2">
                 {project.metrics.map((m, i) => (
                   <MetricPill key={m.label} metric={m} index={i} inView={bodyInView} />
                 ))}
@@ -361,7 +361,7 @@ export default function FlagshipCaseStudy({ project, reverse = false }: Flagship
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Architecture Highlights</span>
               </div>
-              <div className="grid sm:grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {project.highlights.map((h, i) => (
                   <motion.div
                     key={h}
@@ -379,10 +379,10 @@ export default function FlagshipCaseStudy({ project, reverse = false }: Flagship
           </div>
 
           {/* Right panel */}
-          <div className={`p-6 sm:p-8 lg:p-10 flex flex-col gap-7 ${reverse ? 'lg:order-1' : ''}`}>
+          <div className={`p-4 sm:p-6 lg:p-10 flex flex-col gap-6 ${reverse ? 'lg:order-1' : ''}`}>
 
             {/* Dashboard mockup */}
-            <motion.div style={{ y: mockupY }} className="w-full">
+            <motion.div style={{ y: mockupY }} className="w-full overflow-hidden">
               <motion.div
                 initial={{ opacity: 0, scale: 0.92, y: 30 }}
                 animate={bodyInView ? { opacity: 1, scale: 1, y: 0 } : {}}
@@ -397,7 +397,7 @@ export default function FlagshipCaseStudy({ project, reverse = false }: Flagship
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Business Impact</span>
               </div>
-              <div className="grid sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 gap-3">
                 {project.impact.map((item, i) => (
                   <ImpactCard
                     key={item.title}

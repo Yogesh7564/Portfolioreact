@@ -119,7 +119,7 @@ function DashboardMockup({ color }: { color: string }) {
       </div>
 
       {/* Reflection */}
-      <div className="absolute -bottom-8 left-0 right-0 h-8 opacity-20"
+      <div className="absolute bottom-0 left-0 right-0 h-8 opacity-20"
         style={{ background: `linear-gradient(to bottom, ${color}20, transparent)`, filter: 'blur(4px)' }} />
     </div>
   )

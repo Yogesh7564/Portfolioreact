@@ -18,13 +18,13 @@ function ExperienceCard({ exp, index }: { exp: typeof EXPERIENCE[0]; index: numb
       className="relative"
     >
       {/* Timeline connector */}
-      <div className="absolute left-6 top-16 bottom-0 w-[1px] bg-gradient-to-b from-cyan-500/30 to-transparent" />
+      <div className="absolute left-6 top-16 bottom-0 w-[1px] bg-gradient-to-b from-cyan-500/30 to-transparent hidden sm:block" />
 
-      <div className="flex gap-6">
+      <div className="flex gap-3 sm:gap-6">
         {/* Timeline dot */}
         <div className="flex-shrink-0 mt-5">
           <motion.div
-            className="w-12 h-12 rounded-full flex items-center justify-center border-2 relative z-10"
+            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center border-2 relative z-10"
             style={{
               borderColor: typeColor,
               background: `${typeColor}10`,
@@ -32,7 +32,7 @@ function ExperienceCard({ exp, index }: { exp: typeof EXPERIENCE[0]; index: numb
             }}
             whileHover={{ scale: 1.1 }}
           >
-            <span className="text-xl">💼</span>
+            <span className="text-base sm:text-xl">💼</span>
           </motion.div>
         </div>
 

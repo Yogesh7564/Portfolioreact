@@ -145,7 +145,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-[60px] left-4 right-4 z-[998] glass-dark rounded-2xl p-4 md:hidden border border-white/10"
+            className="fixed top-[64px] left-4 right-4 z-[998] glass-dark rounded-2xl p-4 md:hidden border border-white/10"
           >
             <nav className="flex flex-col gap-1">
               {NAV_ITEMS.map((item, i) => (

@@ -73,8 +73,8 @@ export default function Research() {
                 style={{ background: 'linear-gradient(90deg, #38BDF8, #00F5FF, #7C3AED, transparent)' }} />
 
               {/* Decorative corner */}
-              <div className="absolute top-6 right-6 opacity-10">
-                <div className="text-[80px] font-bold font-space leading-none text-cyan-500">IEEE</div>
+              <div className="absolute top-6 right-4 sm:right-6 opacity-10 overflow-hidden">
+                <div className="text-[50px] sm:text-[80px] font-bold font-space leading-none text-cyan-500 select-none">IEEE</div>
               </div>
 
               <div className="p-6 sm:p-8 lg:p-12">
@@ -106,7 +106,7 @@ export default function Research() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={inView ? { opacity: 1, y: 0 } : {}}
                       transition={{ delay: 0.3 }}
-                      className="text-xl sm:text-2xl lg:text-3xl font-bold font-space text-white mb-4 leading-tight"
+                      className="text-lg sm:text-2xl lg:text-3xl font-bold font-space text-white mb-4 leading-tight"
                     >
                       {paper.title}
                     </motion.h3>
