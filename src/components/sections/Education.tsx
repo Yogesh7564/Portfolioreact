@@ -63,8 +63,8 @@ function EduCard({ edu, index }: { edu: typeof EDUCATION[0]; index: number }) {
 
   const accentColor  = index === 0 ? '#00F5FF' : '#A855F7'
   const isCurrently  = index === 0
-  const statusText   = isCurrently ? 'Currently Enrolled · Graduating 2026' : 'Completed'
-  const statusColor  = isCurrently ? '#22c55e' : '#38BDF8'
+  const statusText   = isCurrently ? 'Completed · Graduated' : 'Completed'
+  const statusColor  = isCurrently ? '#38BDF8' : '#38BDF8'
 
   return (
     <motion.div

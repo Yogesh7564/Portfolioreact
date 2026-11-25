@@ -318,14 +318,7 @@ export default function Hero() {
                   Open to Work
                 </motion.div>
 
-                {/* IEEE badge */}
-                <motion.div
-                  className="absolute -top-3 left-0 sm:-left-6 px-3 py-1.5 glass rounded-xl border border-cyan-500/30 flex items-center gap-1.5 text-xs font-medium text-cyan-400 whitespace-nowrap"
-                  animate={{ y: [0, 4, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                >
-                  📄 IEEE Published
-                </motion.div>
+
               </div>
             </motion.div>
           </div>

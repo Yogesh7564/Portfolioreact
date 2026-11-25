@@ -372,26 +372,27 @@ export const EDUCATION: Education[] = [
     period: '2022 – 2026',
     grade: '8.3 CGPA',
     description:
-      'Pursuing B.E. in Computer Science at AIT, Chikkamagaluru, with a strong focus on Java full-stack development, web technologies, and AI/ML research.',
+      'Completed B.E. in Computer Science at AIT, Chikkamagaluru, with a strong focus on Java full-stack development, web technologies, and AI/ML research.',
     highlights: [
       'CGPA: 8.3',
       'IEEE research paper published',
       'Java Full Stack Internship (Dhee Coding Lab)',
       '3 industry-recognized certifications',
     ],
+    status: 'completed',
   },
   {
     id: 'mdr-puc',
     degree: 'Higher Secondary Education (Class 12)',
-    field: 'Science (PCM)',
+    field: 'Science (PCMB)',
     institution: 'MDR PU Science College, Tumakuru',
     period: '2020 – 2022',
     grade: '86.66%',
     description:
-      'Completed higher secondary education in Science stream with 86.66%, building a strong foundation in Mathematics, Physics, and Computer Science.',
+      'Completed higher secondary education in Science stream with 86.66%, building a strong foundation in Physics, Chemistry, Mathematics, and Biology.',
     highlights: [
       'Percentage: 86.66%',
-      'Science stream (PCM)',
+      'Science stream (PCMB)',
       'Strong mathematics foundation',
     ],
   },
